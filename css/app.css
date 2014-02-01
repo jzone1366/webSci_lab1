@@ -1,0 +1,19 @@
+#tweet-ticker li{
+	height: 75px;
+	width: 400px;
+	text-decoration: none;
+	background-color: red;
+	border-radius: 10px;
+	text-indent: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.ticker{
+	height: 400px;
+	overflow: hidden;
+	list-style: none;
+}
+#hash-ticker li{
+	height:40px;
+}
