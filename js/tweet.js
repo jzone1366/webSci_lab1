@@ -1,28 +1,28 @@
 $.getJSON("resources/tweets-clean.json", function(data) {
 	var myData = data;
-	var tweets = [];
 	var hashes = [];
+	var tweets = [];
 	$.each(myData, function(i, item) {
-		tweets.push("<li>" + item.text + "</li>");
+		tweets.push("<li><img src='"+ item.user.profile_image_url + "'/>" + item.text + "</li>");
 		if(item.entities.hashtags[0] != null) {
 			for(var j = 0; j < item.entities.hashtags.length; j++) {
 				hashes.push("<li>#" + item.entities.hashtags[j].text + "</li>");
 			}
-		}
-		$('ul').html(tweets.join(''));
-		//$('ul').html(hashes.join(''));
+		}		
 	});
+	$('#tweets').html(tweets.join(''));
+	$('#hashes').html(hashes.join(''));
 });
 function tweet_slide() {
-	$('#tweet-ticker li:first').slideUp(function() {
-		$(this).appendTo($('#tweet-ticker')).slideDown();
+	$('#tweets li:first').slideUp(function() {
+		$(this).appendTo($('#tweets')).slideDown();
 	});
 };
 setInterval(function() { tweet_slide() }, 3000);
 
-/*function hash_slide() {
-	$('#hash-ticker li:first').slideUp(function() {
-		$(this).appendTo($('#hash-ticker')).slideDown();
+function hash_slide() {
+	$('#hashes li:first').slideUp(function() {
+		$(this).appendTo($('#hashes')).slideDown();
 	});
 };
-setInterval(function() {hash-slide() }, 3000);*/
+setInterval(function() { hash_slide() }, 5000);

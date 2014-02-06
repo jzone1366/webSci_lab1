@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <head>
+	<!-- jQuery -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<!-- Modernizr -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- framework css -->
+	<!--[if gt IE 9]><!-->
+	<link type="text/css" rel="stylesheet" href="css/groundwork.css">
+	<!--<![endif]-->
+	<!--[if lte IE 9]>
+	<link type="text/css" rel="stylesheet" href="css/groundwork-core.css">
+	<link type="text/css" rel="stylesheet" href="css/groundwork-type.css">
+	<link type="text/css" rel="stylesheet" href="css/groundwork-ui.css">
+	<link type="text/css" rel="stylesheet" href="css/groundwork-anim.css">
+	<link type="text/css" rel="stylesheet" href="css/groundwork-ie.css">
+	<![endif]-->
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <html>
 	<body>
-		<ul id="tweet-ticker" class="ticker">
-		</ul>
+		<div class="row">
+			<div class="one half">
+				<ul id="tweets" class="ticker"> </ul>
+			</div>
+			<div class="one half">
+				<ul id="hashes" class="ticker"> </ul>
+			</div>
+		</div>
+			<script type="text/javascript" src="js/groundwork.all.js"></script>
+			<script type="text/javascript" src="js/tweet.js"></script>
 	</body>
-	<script type="text/javascript" src="js/tweet.js"></script>
 </html>

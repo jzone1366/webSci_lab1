@@ -1,19 +1,34 @@
-#tweet-ticker li{
+#tweets li{
 	height: 75px;
-	width: 400px;
-	text-decoration: none;
-	background-color: red;
-	border-radius: 10px;
-	text-indent: 5px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	width: 465px;
+	background-color: #33BBFF;
 }
-
-.ticker{
-	height: 400px;
+#tweets{
+	height: 405px;
 	overflow: hidden;
 	list-style: none;
 }
-#hash-ticker li{
-	height:40px;
+.ticker li {
+	border-radius: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+.ticker li img {
+	float: left;
+	clear: both;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+#hashes {
+	height: 280px;
+	overflow: hidden;
+	list-style: none;
+}
+#hashes li{
+	height: 50px;
+	width: 450px;
+	background-color: #FF3030;
 }
